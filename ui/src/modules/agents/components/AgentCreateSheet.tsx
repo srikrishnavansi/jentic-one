@@ -9,7 +9,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Button, Input, Label, Textarea, SheetPrimitive } from '@/shared/ui';
 import { useCreateAgent, type AgentEntity } from '@/modules/agents/api';
-import { InitialScopesField } from '@/modules/agents/components/InitialScopesField';
+import { InitialPermissionsField } from '@/modules/agents/components/InitialPermissionsField';
 
 interface AgentCreateSheetProps {
 	open: boolean;
@@ -27,7 +27,7 @@ type Intent = 'add-apis' | 'empty';
 export function AgentCreateSheet({ open, onClose, onCreated }: AgentCreateSheetProps) {
 	const [name, setName] = useState('');
 	const [description, setDescription] = useState('');
-	const [scopes, setScopes] = useState<string[]>([]);
+	const [permissions, setPermissions] = useState<string[]>([]);
 	const [error, setError] = useState<string | null>(null);
 	const [intent, setIntent] = useState<Intent | null>(null);
 	const nameRef = useRef<HTMLInputElement>(null);
@@ -48,11 +48,11 @@ export function AgentCreateSheet({ open, onClose, onCreated }: AgentCreateSheetP
 			const agent = await create.mutateAsync({
 				name: trimmed,
 				description: description.trim() || null,
-				scopes,
+				permissions,
 			});
 			setName('');
 			setDescription('');
-			setScopes([]);
+			setPermissions([]);
 			setError(null);
 			onClose();
 			// After the close, so the host's tray opens onto a dismissed sheet
@@ -106,9 +106,9 @@ export function AgentCreateSheet({ open, onClose, onCreated }: AgentCreateSheetP
 						maxLength={1024}
 					/>
 				</div>
-				<InitialScopesField
-					selected={scopes}
-					onChange={setScopes}
+				<InitialPermissionsField
+					selected={permissions}
+					onChange={setPermissions}
 					idPrefix="agent-create"
 				/>
 			</div>
