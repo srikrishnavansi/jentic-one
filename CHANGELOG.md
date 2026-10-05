@@ -1,5 +1,29 @@
 # Changelog
 
+## [0.42.0](https://github.com/jentic/jentic-one/compare/v0.41.0...v0.42.0) (2026-10-05)
+
+
+### Features
+
+* **broker:** record operation method + path on executions; steer agents to search-hit targets ([#1381](https://github.com/jentic/jentic-one/issues/1381)) ([2f13db4](https://github.com/jentic/jentic-one/commit/2f13db494179e12f54e931e211c41cc720d826b3))
+
+
+### Bug Fixes
+
+* **admin:** scope event reads to the caller ([#1508](https://github.com/jentic/jentic-one/issues/1508)) ([d9d93bb](https://github.com/jentic/jentic-one/commit/d9d93bba25fdfd496e86a5354b1c70e93dab6848))
+* **admin:** scope execution reads to the caller ([#1507](https://github.com/jentic/jentic-one/issues/1507)) ([6d0926a](https://github.com/jentic/jentic-one/commit/6d0926aa8dc9197be40c4ccb33b5f14da11fe4eb))
+* **openapi:** publish placeholder hosts and advertise the deployment's own hosts ([#1504](https://github.com/jentic/jentic-one/issues/1504)) ([7b99c77](https://github.com/jentic/jentic-one/commit/7b99c771761fabe6318e7f8a3f5ae9b8e95d5fc9))
+
+
+### Build System
+
+* **deps-dev:** bump @types/node in /ui in the types group ([#1514](https://github.com/jentic/jentic-one/issues/1514)) ([ea097aa](https://github.com/jentic/jentic-one/commit/ea097aa0a0fbb91a14d43fdc39a382dc3cd85265))
+* **deps-dev:** bump prettier from 3.9.8 to 3.9.9 in /ui ([#1515](https://github.com/jentic/jentic-one/issues/1515)) ([967392d](https://github.com/jentic/jentic-one/commit/967392d8dbaf07a668b03cf8dac5afdda45eecc8))
+* **deps-dev:** bump the vite group in /ui with 5 updates ([#1511](https://github.com/jentic/jentic-one/issues/1511)) ([9cd0966](https://github.com/jentic/jentic-one/commit/9cd0966d513300d49cb46c3bd46db77d7f68f32e))
+* **deps-dev:** bump typescript-eslint ([#1512](https://github.com/jentic/jentic-one/issues/1512)) ([f7f8e05](https://github.com/jentic/jentic-one/commit/f7f8e05ed0b637a49fe57b93e4ad233cdd997670))
+* **deps:** bump fastapi from 0.141.1 to 0.142.0 in the python group ([#1516](https://github.com/jentic/jentic-one/issues/1516)) ([ba0e7b4](https://github.com/jentic/jentic-one/commit/ba0e7b4f49e3f4da18416ada695dd3b8a0213af8))
+* **deps:** bump pyjwt from 2.14.0 to 2.15.0 ([#1502](https://github.com/jentic/jentic-one/issues/1502)) ([e6327df](https://github.com/jentic/jentic-one/commit/e6327df3230e31af1dff6174d604b844a4cc54e8))
+
 ## [0.41.0](https://github.com/jentic/jentic-one/compare/v0.40.1...v0.41.0) (2026-09-30)
 
 
